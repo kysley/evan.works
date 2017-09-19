@@ -1,0 +1,17 @@
+.banner {
+}
+
+.banner--text {
+	color: $black;
+	font-size: 5rem;
+	line-height: 1;
+	font-family: TB;
+	animation: text-shadow 1.5s linear infinite;
+}
+
+.banner--blurb {
+}
+
+.banner--text__cgreen {
+	color: $green;
+}
