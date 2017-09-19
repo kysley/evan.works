@@ -12,7 +12,7 @@ export default class Index extends React.Component {
 	
 	render() {
 		return (
-			<div className="fadeInUp">
+			<div>
 				<Banner
 					first="EVAN"
 					last="KYSLEY"

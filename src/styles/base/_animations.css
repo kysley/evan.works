@@ -45,7 +45,7 @@
 		text-shadow: 4px 4px $purple;
 	}
 	50%, 74.9% {
-		text-shadow: 4px 1px $green; 
+		text-shadow: 1px 1px $green; 
 	}
 	75% to {
 		text-shadow: 1px 2px $black;

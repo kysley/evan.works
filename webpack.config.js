@@ -37,10 +37,8 @@ module.exports = {
     vendor: [
       'lost',
       'react-dom',
-      'react-motion',
       'react-ga',
       'react-router-dom',
-      'react-svg-inline',
       'react',
     ],
   },
