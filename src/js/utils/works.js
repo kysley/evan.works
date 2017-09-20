@@ -23,39 +23,27 @@ export default [
     stack: 'express/mongo/pug',
     website: 'https://github.com/kysley/grup',
   },
+  {
+    description: 'an epic 1 summer long clothing line',
+    name: 'offshore clothing',
+    order: 3,
+    slug: 'offshore',
+    stack: 'html/js/ecommerce',
+    website: 'http://offshore.kysley.com',
+  },
+  {
+    description: 'a cool version of my portfolio',
+    name: 'opus',
+    order: 4,
+    slug: 'opus',
+    stack: 'html/js',
+    website: 'http://opus.kysley.com',
+  }
 ]
 
 export const moreWork = [
   {
-    img: 'gener8tor',
-    href: 'http://gener8tor.com',
-  },
-  {
-    img: 'optyn',
-    href: 'https://optyn.com/',
-  },
-  {
-    img: 'wemontage',
-    href: 'http://wemontage.com',
-  },
-  {
-    img: 'beekeeper',
-    href: 'http://beekeeperdata.com',
-  },
-  {
-    img: 'joyspace',
-    href: 'https://angel.co/taplet-1',
-  },
-  {
-    img: 'poparazzi',
-    // href: '',
-  },
-  {
-    img: 'sunsportmarine',
-    // href: '',
-  },
-  {
-    img: 'kioh',
-    // href: '',
+    img: 'placeholder',
+    href: 'placeholder',
   },
 ]
