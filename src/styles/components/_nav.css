@@ -9,17 +9,10 @@
 	z-index: 1;
 	a {
 		display: block;
-		&:hover {
-			color: $red;
-			+#underthehoodman {
-				display: block;
-			}
-		}
 	}
 }
 
 #underthehoodman {
-	display: none;
 	font-size: 1rem;
 	position: absolute;
 	bottom: 3em;

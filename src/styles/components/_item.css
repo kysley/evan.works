@@ -9,17 +9,10 @@
 		color: $purple;
 		font-family: TB;
   	animation: 5s linear infinite lang;
-  	~.item--pic {
-  		display: block
-  	}
-  	~.item--desc {
-  		display: block;
-  	}
 	}
 }
 
 .item--pic {
-	display: none;
 	position: absolute;
 	bottom: 0;
 	height: 80%;
@@ -30,7 +23,6 @@
 	position: absolute;
 	left: 4em;
 	font-family: T;
-	display: none;
 	top: 25vh;
 	font-size: 1.5rem;
 	color: $green;
