@@ -38,7 +38,7 @@ export default [
     slug: 'opus',
     stack: 'html/js',
     website: 'http://opus.kysley.com',
-  }
+  },
 ]
 
 export const moreWork = [
