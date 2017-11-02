@@ -29,3 +29,15 @@ a {
     display: block;
   }
 }
+
+.NOT-RESPONSIVE {
+  max-width: 100vw;
+  max-height: 100vh;
+  font-size: 15rem;
+  top: 0;
+  position: absolute;
+  color: #78E3FD;
+  background-color: #5EFFC4;
+  word-wrap: break-word;
+  overflow: hidden;
+}
