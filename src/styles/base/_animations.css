@@ -1,42 +1,3 @@
-@keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translate3d(0, 100px, 0);
-	}
-	to {
-		opacity: 1;
-		transform: none;
-	}
-}
-
-@keyframes fadeOutDown {
-	from {
-		opacity: 1;
-		transform: none;
-	}
-	to {
-		opacity: 0;
-		transform: translate3d(0, 100px, 0);
-	}
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fadeOut {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
-}
 @keyframes text-shadow {
 	from, 24.9% {
 		text-shadow: 8px 8px $red;
@@ -45,7 +6,7 @@
 		text-shadow: 4px 4px $purple;
 	}
 	50%, 74.9% {
-		text-shadow: 1px 1px $green; 
+		text-shadow: 1px 1px $green;
 	}
 	75% to {
 		text-shadow: 1px 2px $black;
@@ -62,48 +23,4 @@
 		-webkit-transform: scale(1) translate3d(calc((20vw / 2)), 0, 0);
 		transform: scale(1) translate3d(calc((20vw / 2)), 0, 0)
 	}
-}
-
-.fadeInUp {
-	animation-duration: 500ms;
-	animation-name: fadeInUp;
-	animation-fill-mode: forwards;
-	opacity: 0;
-}
-
-.fadeOutDown {
-	animation-duration: 500ms;
-	animation-name: fadeOutDown;
-	animation-fill-mode: forwards;
-	opacity: 1;
-}
-
-.fadeIn {
-	animation-duration: 500ms;
-	animation-name: fadeIn;
-	animation-fill-mode: forwards;
-	opacity: 0;
-}
-
-.fadeOut {
-	animation-duration: 500ms;
-	animation-name: fadeOut;
-	animation-fill-mode: forwards;
-	opacity: 1;
-}
-
-.dur-3 {
-	animation-duration: 300ms !important;
-}
-
-.delay-1 {
-	animation-delay: 100ms;
-}
-
-.delay-2 {
-	animation-delay: 400ms;
-}
-
-.delay-8 {
-	animation-delay: 800ms;
 }
