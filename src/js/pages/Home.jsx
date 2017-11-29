@@ -33,17 +33,14 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        <Banner
-          first="EVAN"
-          last="KYSLEY"
-        />
+        <Banner />
         {allWorks.map(work => (
           <Item
             work={work}
             key={work.order}
           />
         ))}
-        { this.state.isResizing && <h1 className="NOT-RESPONSIVE">NOT RESPONSIVE</h1> }
+        { this.state.isResizing && <h1 className="NOT-RESPONSIVE">YOU SHOULD KNOW BETTER</h1> }
       </div>
     )
   }

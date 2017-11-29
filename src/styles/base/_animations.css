@@ -1,4 +1,4 @@
-@keyframes text-shadow {
+/* @keyframes text-shadow {
 	from, 24.9% {
 		text-shadow: 8px 8px $red;
 	}
@@ -11,7 +11,7 @@
 	75% to {
 		text-shadow: 1px 2px $black;
 	}
-}
+} */
 
 @keyframes lang {
 	0% {

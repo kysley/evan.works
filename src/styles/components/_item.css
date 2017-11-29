@@ -1,34 +1,79 @@
 .item--container {
-	lost-align: center;
+	position: absolute;
+	max-width: 40%;
+	&:nth-of-type(2) {
+		&>.item--pic__wrapper::after {
+			left: 60px;
+			bottom: -60px;
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path stroke="#F4AC45" d="M-1 1l2-2M0 10L10 0M9 11l2-2"/></svg>');
+		}
+		top: 10vh;
+		left: 10vw;
+	}
+	&:nth-of-type(3) {
+		&>.item--pic__wrapper::after {
+			bottom: 84px;
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path stroke="#68A691" d="M-1 1l2-2M0 10L10 0M9 11l2-2"/></svg>');
+		}
+		top: 50vh;
+		left: 60vw;
+	}
+	&:nth-of-type(4) {
+		&>.item--pic__wrapper::after {
+			left: -50px;
+			bottom: -5px;
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path stroke="#E2A0FF" d="M-1 1l2-2M0 10L10 0M9 11l2-2"/></svg>');
+		}
+		top: 80vh;
+		left: 20vw;
+	}
+	&:nth-of-type(5) {
+		&>.item--pic__wrapper::after {
+			left: 25px;
+			bottom: 0px;
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path stroke="#226CE0" d="M-1 1l2-2M0 10L10 0M9 11l2-2"/></svg>');
+		}
+		top: 130vh;
+		left: 47vw;
+	}
+	&:nth-of-type(6) {
+		&>.item--pic__wrapper::after {
+			bottom: 36px;
+			left: -39px;
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path stroke="#E40066" d="M-1 1l2-2M0 10L10 0M9 11l2-2"/></svg>');
+		}
+		top: 170vh;
+		left: 6vw;
+	}
 }
 
 .item--item {
 	font-size: 5rem;
 	display: inline-block;
+	position: absolute;
+	top: -1em;
 	&:hover {
-		color: $purple;
+		color: $white;
+		background: $black;
 		font-family: TB;
   	animation: 5s linear infinite lang;
 	}
 }
 
-.item--pic {
-	position: absolute;
-	bottom: 0;
-	height: 80%;
-	z-index: -1;
+.item--pic__wrapper {
+	&::after {
+		content: "";
+		position: absolute;
+		height: 82%;
+		width: 100%;
+		bottom: 5px;
+		left: 10px;
+		z-index: -2;
+		background-size: 10px 10px;
+	}
 }
 
-.item--desc {
-	position: absolute;
-	left: 4em;
-	font-family: T;
-	top: 25vh;
-	font-size: 1.5rem;
-	color: $green;
-	width: 200px;
-	span {
-		display: block;
-		color: $red;
-	}
+.item--pic {
+	width: 100%;
+	z-index: -1;
 }

@@ -1,17 +1,14 @@
 .banner {
+  lost-align: center;
 }
 
 .banner--text {
 	color: $black;
-	font-size: 5rem;
-	line-height: 1;
-	font-family: TB;
-	animation: text-shadow 1.5s linear infinite;
-}
-
-.banner--blurb {
-}
-
-.banner--text__cgreen {
-	color: $green;
+  margin-top: 1em;
+	font-size: 2rem;
+  font-family: TB;
+  position: fixed;
+  z-index: 5;
+  background-position: 0 calc(100% - 11px);
+  background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 4"><path fill="none" stroke="#E40066" d="M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3" class="st0"/></svg>') ;
 }
