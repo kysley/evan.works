@@ -42,8 +42,17 @@
 			left: -39px;
 			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path stroke="#E40066" d="M-1 1l2-2M0 10L10 0M9 11l2-2"/></svg>');
 		}
-		top: 170vh;
+		top: 190vh;
 		left: 6vw;
+	}
+	&:nth-of-type(7) {
+		&>.item--pic__wrapper::after {
+			bottom: 120px;
+			left: 2px;
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path stroke="#505A5B" d="M-1 1l2-2M0 10L10 0M9 11l2-2"/></svg>');
+		}
+		top: 240vh;
+		left: 41vw;
 	}
 }
 

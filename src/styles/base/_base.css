@@ -34,11 +34,12 @@ a {
 .NOT-RESPONSIVE {
   min-width: 100vw;
   min-height: 100vh;
-  font-size: 15rem;
+  font-size: 25vh;
   top: 0;
+  z-index: 10;
   position: fixed;
   color: #E40066;
   background-color: #000000;
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
   overflow: hidden;
 }
