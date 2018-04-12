@@ -1,8 +1,0 @@
-.notfoundsendhelp {
-	lost-align: center;
-	lost-center: flex;
-	span {
-		color: $red;
-		font-size: 1.5rem;
-	}
-}
