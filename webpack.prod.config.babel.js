@@ -3,45 +3,54 @@ import path from 'path'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 // import InlineChunkManifestHtmlWebpackPlugin from 'inline-chunk-manifest-html-webpack-plugin'
+import WebpackChunkHash from 'webpack-chunk-hash'
+import CompressionPlugin from 'compression-webpack-plugin'
+import CleanWebpackPlugin from 'clean-webpack-plugin'
 
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  title: 'Evan Kysley',
-  template: path.join(__dirname, 'src', 'index.ejs'),
-  favicon: path.join(__dirname, 'src', 'assets', 'img', 'favicon.ico'),
-  minify: {
-    collapseWhitespace: true,
-  },
-})
 
 export default {
-  devtool: 'cheap-module-source-map',
   entry: {
     app: [
       'babel-polyfill',
-      './src/index.js',
+      path.join(__dirname, 'src', 'index.js'),
     ],
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'assets/[name].js',
-    chunkFilename: 'assets/[name].js',
+    filename: 'assets/[name].[chunkhash].js',
+    chunkFilename: 'assets/[name].[chunkhash].js',
     publicPath: '/',
-  },
-  devServer: {
-    contentBase: './src/',
-    hot: true,
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'production'),
       },
     }),
-    /* Done automatically in Development env
-      new webpack.NamedModulesPlugin(),
-      new webpack.NoEmitOnErrorsPlugin(),
-    */
-    HtmlWebpackPluginConfig,
+    new CleanWebpackPlugin(['dist']),
+    new webpack.HashedModuleIdsPlugin(),
+    new WebpackChunkHash(),
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Evan Kysley',
+      template: path.join(__dirname, 'src', 'index.ejs'),
+      favicon: path.join(__dirname, 'src', 'assets', 'img', 'favicon.ico'),
+      meta: [
+        {
+          name: 'Evan Kysley',
+          content: 'React Portfolio',
+        },
+      ],
+      minify: {
+        collapseWhitespace: true,
+      },
+    }),
     // new InlineChunkManifestHtmlWebpackPlugin({
     //   dropAsset: true,
     // }),
@@ -78,5 +87,19 @@ export default {
         include: path.join(__dirname, 'src'),
       },
     ],
+  },
+  optimization: {
+    minimize: true,
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+          minChunks: 2,
+        },
+      },
+    },
+    concatenateModules: true, // ModuleConcatenationPlugin
   },
 }
